@@ -5,49 +5,156 @@
 *,
 *::before,
 *::after {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    outline: 1px solid gray;
-}
-
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100vh;
+    /* outline: 1px solid gray; */
 }
 
 .container {
     display: grid;
-    grid: auto / repeat(auto-fit, minmax(250px, 1fr));
-
+    grid: 1fr 3fr / repeat(auto-fit, minmax(250px, 1fr));
+    min-height: 100vh;
 }
 
 .header {
-    background-color: white;
+    background-image: radial-gradient(ellipse at right, rgb(0, 0, 0), rgb(0, 0, 0));
+    color: white;
     grid-column: 2 / 6;
     grid-row: 1;
+    display: grid;
+    grid: auto / 2fr;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
+    z-index: 1;
+}
+
+.search-bar-container input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    padding: 5px;
+    width: 70%;
+}
+
+.header .header-top {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid: auto / 2fr 1fr;
+}
+
+.header .header-bottom {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid: auto / 1fr 1fr;
+}
+
+.greet-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    margin-left: 50px;
+}
+
+.media-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.media-buttons button {
+    background-image: radial-gradient(ellipse at bottom, rgb(104, 116, 0), rgb(0, 0, 0));
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 100px;
+    padding: 7px 25px;
+    cursor: pointer;
+}
+
+.greet-container .greet-icon {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.greet-container .greet-text span {
+    display: block;
+}
+
+.greet-container .greet-text .hi-there {
+    font-size: smaller;
+    font-weight: bolder;
+}
+
+.greet-container .greet-text .user-name {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.header .header-top .search-bar-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.header .header-top .profile-and-alerts-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+}
+
+.search-icon,
+.profile-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.alert-bell {
+    font-size: medium;
+    cursor: pointer;
+}
+
+.name {
+    font-weight: bolder;
 }
 
 .sidebar {
-    background-color: rgb(0, 17, 26);
+    background-image: radial-gradient(ellipse at bottom, rgb(20, 102, 0), rgb(0, 0, 0));
     color: white;
     font-weight: bolder;
     grid-column: 1;
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
     gap: 20px;
     padding: 20px;
 }
 
 .sidebar .logo::before {
     content: '🧟‍♂️';
+    font-size: 3.5rem;
     margin-right: 20px;
-    font-size: 3rem;
+    background-color: rgba(206, 0, 0, 0.459);
+    border-radius: 100%;
+    cursor: pointer;
 }
 
 .sidebar .logo {
-    font-size: 1.5rem;
+    color: rgb(161, 206, 0);
+    -webkit-text-stroke: 2px black;
+    font-family: "Creepster", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: left;
+    cursor: pointer;
 }
 
 .sidebar ul {
@@ -56,62 +163,155 @@ body {
 
 .sidebar li {
     padding: 10px;
+    cursor: pointer;
 }
 
 .sidebar .home::before {
     content: '🏰';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .profile::before {
     content: '💀';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .messages::before {
     content: '💬';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .history::before {
     content: '📜';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .tasks::before {
     content: '✔️';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .communities::before {
     content: '🫂';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .settings::before {
     content: '⚙️';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .support::before {
     content: '👨‍💼';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .sidebar .privacy::before {
     content: '🔐';
+    font-size: 1.5rem;
     margin-right: 20px;
 }
 
 .main-content {
-    background-color: lavender;
+    background-color: rgb(161, 206, 0);
     grid-column: 2 / 6;
     grid-row: 2 / 3;
     display: grid;
-    grid: auto / repeat(auto-fit, minmax(250px, 1fr));
-    gap: 5px;
+    grid: auto / repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 25px;
 }
 
 .main-content > div {
     background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid rgb(100, 150, 0);
+    height: 250px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.685);
+}
+
+.main-content .content-box-1,
+.main-content .content-box-2,
+.main-content .content-box-3,
+.main-content .content-box-4,
+.main-content .content-box-5,
+.main-content .content-box-6,
+.main-content .content-box-7,
+.main-content .content-box-8 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-content .content-box-1::before,
+.main-content .content-box-2::before,
+.main-content .content-box-3::before,
+.main-content .content-box-4::before,
+.main-content .content-box-5::before,
+.main-content .content-box-6::before,
+.main-content .content-box-7::before,
+.main-content .content-box-8::before {
+    display: grid;
+    place-content: center;
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    text-align: center;
+    pointer-events: none;
+    position: absolute;
+    inset: 70% 0 0 0;
+    background-color: rgba(0, 0, 0, 0.705);
+    z-index: 1;
+
+}
+
+.main-content .content-box-1::before {
+    content: 'Coding DOOM in JavaScript!';
+}
+
+.main-content .content-box-2::before {
+    content: 'Creating a speedrun bot in Python';
+}
+
+.main-content .content-box-3::before {
+    content: 'Programming a classic arcade emulator in Java';
+}
+
+.main-content .content-box-4::before {
+    content: 'Punch Out the competition, All secrets revealed!';
+}
+
+.main-content .content-box-5::before {
+    content: 'C++ vs Rust: Street Fighter Edition';
+}
+
+.main-content .content-box-6::before {
+    content: 'Japans top 20 weirdest retro video game hidden gems!';
+}
+
+.main-content .content-box-7::before {
+    content: 'The real reason arcades faded away';
+}
+
+.main-content .content-box-8::before {
+    content: 'Studies show late night gaming is actually good for your health?';
+}
+
+.main-content .content-imgs img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    transition: all 200ms ease-in;
+}
+
+.main-content .content-imgs img:hover {
+    transform: scale(1.1);
 }
