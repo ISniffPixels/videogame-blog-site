@@ -14,15 +14,14 @@
 
 .container {
     display: grid;
-    grid: 1fr 3fr / repeat(auto-fit, minmax(250px, 1fr));
+    grid: 1fr 4fr / repeat(auto-fit, minmax(325px, 1fr));
     min-height: 100vh;
 }
 
 .header {
     background-image: radial-gradient(ellipse at right, rgb(0, 0, 0), rgb(0, 0, 0));
     color: white;
-    grid-column: 2 / 6;
-    grid-row: 1;
+    grid-column: 2 / -1;
     display: grid;
     grid: auto / 2fr;
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.404);
@@ -137,6 +136,14 @@
     padding: 20px;
 }
 
+.right-sidebar .content-box-9,
+.right-sidebar .content-box-10 {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid rgb(100, 150, 0);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.685);
+}
+
 .sidebar .logo::before {
     content: '🧟‍♂️';
     font-size: 3.5rem;
@@ -221,8 +228,8 @@
 }
 
 .main-content {
-    background-color: rgb(161, 206, 0);
-    grid-column: 2 / 6;
+    background-color: rgb(255, 255, 255);
+    grid-column: 2 / -1;
     grid-row: 2 / 3;
     display: grid;
     grid: auto / repeat(auto-fit, minmax(300px, 1fr));
@@ -233,8 +240,8 @@
 .main-content > div {
     background-color: white;
     border-radius: 10px;
+    height: 300px;
     border-left: 10px solid rgb(100, 150, 0);
-    height: 250px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.685);
 }
 
@@ -245,7 +252,10 @@
 .main-content .content-box-5,
 .main-content .content-box-6,
 .main-content .content-box-7,
-.main-content .content-box-8 {
+.main-content .content-box-8,
+.main-content .content-box-9,
+.main-content .content-box-10
+{
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -258,7 +268,9 @@
 .main-content .content-box-5::before,
 .main-content .content-box-6::before,
 .main-content .content-box-7::before,
-.main-content .content-box-8::before {
+.main-content .content-box-8::before,
+.main-content .content-box-9::before,
+.main-content .content-box-10::before {
     display: grid;
     place-content: center;
     color: white;
@@ -298,11 +310,19 @@
 }
 
 .main-content .content-box-7::before {
-    content: 'The real reason arcades faded away';
+    content: 'Revisiting the Sega Genesis';
 }
 
 .main-content .content-box-8::before {
-    content: 'Studies show late night gaming is actually good for your health?';
+    content: 'Super Metroid ultimate guide!';
+}
+
+.main-content .content-box-9::before {
+    content: 'Top 25 animes that were made into successful video games!';
+}
+
+.main-content .content-box-10::before {
+    content: 'Is GoldenEye 64 the best N64 game ever made?';
 }
 
 .main-content .content-imgs img {
