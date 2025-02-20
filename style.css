@@ -14,7 +14,7 @@
 
 .container {
     display: grid;
-    grid: 1fr 4fr / repeat(auto-fit, minmax(325px, 1fr));
+    grid: 1fr 4fr / repeat(auto-fit, minmax(300px, 1fr));
     min-height: 100vh;
 }
 
