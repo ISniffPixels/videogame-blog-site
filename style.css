@@ -254,7 +254,9 @@
 .main-content .content-box-7,
 .main-content .content-box-8,
 .main-content .content-box-9,
-.main-content .content-box-10
+.main-content .content-box-10,
+.main-content .content-box-11,
+.main-content .content-box-12
 {
     position: relative;
     overflow: hidden;
@@ -270,7 +272,9 @@
 .main-content .content-box-7::before,
 .main-content .content-box-8::before,
 .main-content .content-box-9::before,
-.main-content .content-box-10::before {
+.main-content .content-box-10::before,
+.main-content .content-box-11::before,
+.main-content .content-box-12::before {
     display: grid;
     place-content: center;
     color: white;
@@ -323,6 +327,14 @@
 
 .main-content .content-box-10::before {
     content: 'Is GoldenEye 64 the best N64 game ever made?';
+}
+
+.main-content .content-box-11::before {
+    content: 'Oregon Trail Modern Remake!';
+}
+
+.main-content .content-box-12::before {
+    content: 'Is more than one computer screen essential?';
 }
 
 .main-content .content-imgs img {
